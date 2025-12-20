@@ -49,16 +49,5 @@ def project_display():
     st.write(f'You chose range: {year_range[0]}-{year_range[1]}')
 
     filtered_data = data[(data['Year'] >= year_range[0]) & (data['Year'] <= year_range[1])]
-    
     fig = px.line(filtered_data, x='Year', y='Population', color='City')
-    
-    fig.update_layout(
-    legend=dict(
-        orientation='h',
-        yanchor='bottom',
-        y=1.02,
-        xanchor='right',
-        x=1
-        )
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
