@@ -87,4 +87,4 @@ def property_calculator():
     
         submitted = st.form_submit_button("Calculate Price")
         if submitted:
-            st.write(f"IDR {round((a*b*c*d)*60, 2)} billion")
+            st.markdown(f"**IDR {round((a*b*c*d)*60, 2)} billion**")
