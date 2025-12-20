@@ -8,8 +8,8 @@ def about_me():
     pill = st.pills("Explore this site!", pages)
 
     if pill == "Project":
-        st.switch_page("Project")
+        st.switch_page("project.py")
     elif pill == "Property Price Prediction":
-        st.switch_page("Property Price Prediction")
+        st.switch_page("property_price_calculator.py")
     elif pill == "Contact":
-        st.switch_page("Contact")
+        st.switch_page("contact.py")
