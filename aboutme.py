@@ -8,6 +8,6 @@ def about_me():
         with st.spinner('Loading projects...'):
             time.sleep(1)  
         if st.button('Explore Jakarta Population'):
-            st.switch_page("project.py")
+            st.switch_page("Project")
         if st.button('Explore Jakarta Property Price'):
             st.switch_page("property_price_calculator.py")
