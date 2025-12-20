@@ -23,11 +23,11 @@ def property_calculator():
         elif selected_district in ['Pluit', 'Tebet', 'Cilandak', 'Kembangan','Kelapa Gading']:
             a = 0.6
         elif selected_district in ['Pulo Gadung', 'Tanjung Barat']:
-            a = 0.5
+            a = 0.45
         elif selected_district in ['Cibubur', 'Muara Angke', 'Jagakarsa']:
-            a = 0.4
+            a = 0.35
         else:
-            a = 0.3
+            a = 0.25
     
     with total_area:
         area_options = ['50-100 sqm', '100-150 sqm', '150-200 sqm', 
