@@ -85,5 +85,6 @@ def property_calculator():
             elif selected_building == 'Land':
                 d = 0.65
     
-        if st.button("Calculate Price"):
+        submitted = st.form_submit_button("Calculate Price")
+        if submitted:
             st.write(f"IDR {round((a*b*c*d)*60, 2)} billion")
