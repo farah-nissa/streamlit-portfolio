@@ -44,8 +44,7 @@ def project_display():
     st.markdown('### Filter Data')
     min_year = data['Year'].min()
     max_year = data['Year'].max()
-    range_slider = st.slider('Choose Range:', min_year, max_year, (min_year, max_year))
-    st.write(f'You chose range: {min_year}-{max_year}')
+    st.slider('Choose Range:', min_year, max_year, (min_year, max_year), key='year_range')    st.write(f'You chose range: {min_year}-{max_year}')
 
     filtered_data = data[(data['Year'] >= range_slider[0]) & (data['Year'] <= range_slider[1])]
     fig = px.line(filtered_data, x='Year', y='Population', color='City')
