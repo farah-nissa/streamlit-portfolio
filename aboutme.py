@@ -4,12 +4,8 @@ def about_me():
     st.subheader('Hi! My name is Farah.')
     st.write("I'm a data scientist. I love building visualizations and making predictions.")
 
-    pages = ["Project", "Property Price Prediction", "Contact"]
-    pill = st.pills("Explore this site!", pages)
+    st.write('Explore this site!')
 
-    if pill == "Project":
-        st.switch_page("project.py")
-    elif pill == "Property Price Prediction":
-        st.switch_page("property_price_calculator.py")
-    elif pill == "Contact":
-        st.switch_page("contact.py")
+    if st.button("Property Price Calculator"):
+        import property_price_calculator
+        property_price_calculator.property_calculator()
