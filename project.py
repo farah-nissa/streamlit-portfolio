@@ -50,7 +50,9 @@ def project_display():
 
     filtered_data = data[(data['Year'] >= year_range[0]) & (data['Year'] <= year_range[1])]
     
-    fig = px.line(filtered_data, x='Year', y='Population', color='City', title='Jakarta Population Through the Years')fig.update_layout(
+    fig = px.line(filtered_data, x='Year', y='Population', color='City')
+    
+    fig.update_layout(
     legend=dict(
         orientation='h',
         yanchor='bottom',
