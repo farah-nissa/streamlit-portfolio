@@ -4,7 +4,7 @@ import plotly.express as px
 
 def project_display():
 
-    st.header('Jakarta Population by City & Year')
+    st.header('Jakarta Population Through the Years')
 
     population_data = {
         'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
@@ -41,11 +41,13 @@ def project_display():
     
     data = pd.DataFrame(population_data)
 
-    st.markdown('### Filter Data')
+    st.markdown('### Filter Year')
     min_year = data['Year'].min()
     max_year = data['Year'].max()
-    st.slider('Choose Range:', min_year, max_year, (min_year, max_year), key='year_range')    st.write(f'You chose range: {min_year}-{max_year}')
 
-    filtered_data = data[(data['Year'] >= range_slider[0]) & (data['Year'] <= range_slider[1])]
+    year_range = st.slider('Choose Range:', min_year, max_year, (min_year, max_year), key='year_range')
+    st.write(f'You chose range: {year_range[0]}-{year_range[1]}')
+
+    filtered_data = data[(data['Year'] >= year_range[0]) & (data['Year'] <= year_range[1])]
     fig = px.line(filtered_data, x='Year', y='Population', color='City')
     st.plotly_chart(fig)
