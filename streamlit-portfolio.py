@@ -5,12 +5,12 @@ st.title("Farah's Portfolio")
 
 st.sidebar.title('Navigation')
 
-page = st.sidebar.radio('Pages', ['About Me', 'Project', 'Property Price Prediction', 'Contact'])
+page = st.sidebar.radio('Pages', ['About Me', 'Population Trend', 'Property Price Prediction', 'Contact'])
 
 if page == 'About Me':
     import aboutme 
     aboutme.about_me()
-elif page == 'Project':
+elif page == 'Population Trend':
     import project 
     project.project_display()
 elif page == 'Property Price Prediction':
