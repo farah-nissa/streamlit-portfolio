@@ -83,4 +83,4 @@ def property_calculator():
             d = 0.65
     
     if st.button("Calculate Price"):
-        st.write(f"IDR {round((a*b*c*d)*80, 2)} billion")
+        st.write(f"IDR {round((a*b*c*d)*60, 2)} billion")
