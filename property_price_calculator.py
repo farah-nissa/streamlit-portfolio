@@ -57,9 +57,9 @@ def property_calculator():
         lane_options = ['1 lane', '2 lanes', '3 lanes', '4 lanes']
         selected_lane = st.selectbox('Street Width', lane_options)
         if selected_lane == '1 lane':
-            c = 0.3
-        elif selected_lane == '2 lanes':
             c = 0.5
+        elif selected_lane == '2 lanes':
+            c = 0.65
         elif selected_lane == '3 lanes':
             c = 0.8
         elif selected_lane == '4 lanes':
@@ -74,13 +74,13 @@ def property_calculator():
         if selected_building == 'Landed House (New)':
             d = 1
         if selected_building == 'Landed House (Old)':
-            d = 0.6
+            d = 0.75
         elif selected_building == 'Apartment (>2010 Building)':
-            d = 0.8
+            d = 0.85
         elif selected_building == 'Apartment (<2009 Building)':
-            d = 0.5
+            d = 0.55
         elif selected_building == 'Land':
-            d = 0.6
+            d = 0.65
     
     if st.button("Calculate Price"):
         st.write(f"IDR {round((a*b*c*d)*50, 2)} billion")
