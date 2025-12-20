@@ -5,7 +5,7 @@ def about_me():
     st.write("I'm a data scientist. I love building visualizations and making predictions.")
 
     pages = ["Project", "Property Price Prediction", "Contact"]
-    pill = st.radio("", pages, horizontal=True)
+    pill = st.pills("Explore this site!", pages)
 
     if pill == "Project":
         st.switch_page("project.py")
