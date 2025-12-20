@@ -49,5 +49,3 @@ def project_display():
     filtered_data = data[(data['Year'] >= range_slider[0]) & (data['Year'] <= range_slider[1])]
     fig = px.line(filtered_data, x='Year', y='Population', color='City')
     st.plotly_chart(fig)
-
-project_display()
