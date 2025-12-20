@@ -1,7 +1,10 @@
 import streamlit as st
 
 def property_calculator():
-    st.header("Property Price Calculator")
+    
+    c = st.container()
+    
+    c.header("Property Price Calculator")
     
     st.write("Calculate the budget you need for a property in Jakarta.")
 
